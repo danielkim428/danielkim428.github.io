@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600&family=Raleway:wght@800&display=swap');
+
+body {
+    font-size: 100%;
+}
+.title {
+    font-family: 'Outfit', sans-serif;
+}
+.subtitle {
+    font-family: 'Outfit', sans-serif;
+}
+
+.card-text {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+}
+
+.tag {
+    font-size: 0.7rem !important;
+    border-radius: 40px !important;
+}
+
+
+.block {
+    position: relative;
+    cursor: pointer;
+}
+
+.image {
+    position: absolute;
+    height: 23rem;
+    left:0;
+    right:0;
+    top:0.5rem;
+    margin:auto;
+    z-index: 10;
+    transition: all 0.2s ease-in-out;
+}
+
+.image:hover {
+  transform: scale(0.95);
+}
