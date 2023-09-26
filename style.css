@@ -5,9 +5,12 @@ body {
 }
 .title {
     font-family: 'Outfit', sans-serif;
+    font-size: 2rem;
 }
+
 .subtitle {
     font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
 }
 
 .card-text {
@@ -28,15 +31,30 @@ body {
 
 .image {
     position: absolute;
-    height: 23rem;
+    height: 20rem;
     left:0;
     right:0;
-    top:0.5rem;
+    top:2rem;
     margin:auto;
     z-index: 10;
     transition: all 0.2s ease-in-out;
 }
 
 .image:hover {
-  transform: scale(0.95);
+    transform: scale(0.95);
+}
+
+@media (min-width: 1200px) {
+    .title {
+        font-size: 8rem;
+    }
+
+    .subtitle {
+        font-size: 2rem;
+    }
+
+    .image {
+        height: 23rem;
+        top:0.5rem;
+    }
 }
