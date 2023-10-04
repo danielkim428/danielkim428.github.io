@@ -1,16 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600&family=Raleway:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant&family=Outfit:wght@600&family=Quicksand&display=swap');
 
 body {
     font-size: 100%;
 }
+
+.page {
+    height: 100vh;
+    perspective: 1px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-left: -80%;
+}
+
+.parall {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
 .title {
     font-family: 'Outfit', sans-serif;
-    font-size: 2rem;
+    text-wrap: wrap;
+    font-size: 2.5rem;
+    transform: translateZ(0) translate(50%, 20%);
+    z-index: 1;
 }
 
 .subtitle {
-    font-family: 'Outfit', sans-serif;
-    font-size: 1rem;
+    font-family: 'Quicksand', sans-serif;
+    text-wrap: wrap;
+    font-size: 1.5rem;
+    transform: translateZ(-1px) translate(50%, 10%);
+    z-index: 2;
+}
+
+.contact {
+    font-family: 'Quicksand', sans-serif;
+    text-wrap: wrap;
+    font-size: 1.5rem;
+    transform: translateZ(-1.2px) translate(50%, 17%);
+    z-index: 2;
+}
+
+#timeline {
+    position: fixed;
+    left: 50%;
+    width: 80vw;
+    top: 45%;
+    transform: translate(-50%, 0);
+    z-index: -5;
+}
+
+#progress {
+    opacity: 0;
+    position: fixed;
+    width: 80vw;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+a {
+    color: black !important;
 }
 
 .card-text {
@@ -23,6 +76,11 @@ body {
     border-radius: 40px !important;
 }
 
+.neu {
+    font-family: 'Cormorant', serif;
+    font-weight: bold;
+    color: red;
+}
 
 .block {
     position: relative;
@@ -32,10 +90,10 @@ body {
 .image {
     position: absolute;
     height: 20rem;
-    left:0;
-    right:0;
-    top:2rem;
-    margin:auto;
+    left: 0;
+    right: 0;
+    top: 2rem;
+    margin: auto;
     z-index: 10;
     transition: all 0.2s ease-in-out;
 }
@@ -44,17 +102,122 @@ body {
     transform: scale(0.95);
 }
 
-@media (min-width: 1200px) {
+.label {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 11px;
+    animation: fadeIn 6s;
+}
+
+.label-year {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 9px;
+    animation: fadeIn 6s;
+}
+
+.dot {
+    animation: fadeIn 5s;
+}
+
+.timeline {
+    animation: 2s ease-out 0s 1 slideInFromLeft;
+}
+
+.content {
+    margin-top: 700px;
+    margin-left: 50%;
+}
+
+.project {
+    margin-bottom: 5rem;
+}
+
+.project-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.2rem;
+}
+
+.project-year {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+}
+
+.project-content {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    width: 90%;
+}
+
+.project-tag {
+    width: 90%;
+    text-wrap: wrap;
+}
+
+#name {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    opacity: 0;
+    position: fixed;
+    top: 3%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+@media (min-width: 1000px) {
     .title {
-        font-size: 8rem;
+        font-size: 6rem;
+        text-wrap: nowrap;
+        transform: translateZ(0) translate(50%, 15%);
     }
 
     .subtitle {
-        font-size: 2rem;
+        font-size: 3rem;
+        text-wrap: nowrap;
+    }
+
+    .contact {
+        font-size: 3rem;
+        text-wrap: nowrap;
     }
 
     .image {
         height: 23rem;
-        top:0.5rem;
+        top: 0.5rem;
+    }
+
+    #progress {
+
+        width: 40vw;
+    }
+
+    .project {
+
+    }
+
+    .project-title {
+        font-size: 2rem;
+    }
+
+    .project-content {
+        font-size: 1.2rem;
+        width: 50%;
     }
 }
