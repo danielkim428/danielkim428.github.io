@@ -24,7 +24,7 @@ body {
     font-family: 'Outfit', sans-serif;
     text-wrap: wrap;
     font-size: 2.5rem;
-    transform: translateZ(0) translate(50%, 20%);
+    transform: translateZ(0) translate(50%, 22%);
     z-index: 1;
 }
 
@@ -181,11 +181,11 @@ a {
 }
 
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
     .title {
         font-size: 6rem;
         text-wrap: nowrap;
-        transform: translateZ(0) translate(50%, 15%);
+        transform: translateZ(0) translate(50%, 13%);
     }
 
     .subtitle {
